@@ -1,4 +1,4 @@
-# Python Multistage Container Build for Star Wars API
+# Fastapi Multistage Container Build for Star Wars API
 
 This repository contains a Flask application that serves data from the Star Wars API (SWAPI). It demonstrates the use of a multistage Docker container build to create a lightweight, secure final image.
 
@@ -15,16 +15,16 @@ Follow these steps to build and run the Star Wars API Flask application inside a
 To build the Docker image, use the following command in the root directory of this project:
 
 ```sh
-docker build -t python_multistage_starwars_api .
+docker build -t fastapi_multistage_starwars_api .
 ```
 
-This command builds a Docker image named python_multistage_starwars_api using the Dockerfile located in the current directory.
+This command builds a Docker image named fastapi_multistage_starwars_api using the Dockerfile located in the current directory.
 
 ### Running the Container
 ```sh
-docker run -p 5002:5002 python_multistage_starwars_api
+docker run -p 5002:5002 fastapi_multistage_starwars_api
 ```
-This command starts a container based on the python_multistage_starwars_api image. It maps port 5002 of the container to port 5002 on the host, allowing you to access the Flask application by navigating to http://localhost:5002 in your web browser.
+This command starts a container based on the fastapi_multistage_starwars_api image. It maps port 5002 of the container to port 5002 on the host, allowing you to access the Flask application by navigating to http://localhost:5002 in your web browser.
 
 
 ### API Endpoints
@@ -37,7 +37,7 @@ The application provides the following endpoints:
 #### API Endpoints Search
 - You can use the 'search' query parameter to filter results based on the name of the starship or character. 
 ```sh
-http://localhost:5002/characters?luke
+http://localhost:5002/characters?search=luke
 ```
 
 
